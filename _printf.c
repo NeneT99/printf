@@ -1,28 +1,22 @@
 #include "main.h"
+#include <stdio.h>
+#include <string.h>
 #include <stdarg.h>
 
 
 int _printf(const char *format, ...)
 {
 	int charactersthatwewillprint = 0;
-
-
-
-
 	va_list listofourarguments;
 	
 	if(format == NULL)
 	{
 		return(-1);
 	}
+	va_start(listofourarguments, format);
 
-
-
-	va_start (listofourarguments,format);
-
-
+	/*looping through our format of characters*/
 	while(*format)
-	
 	{
 		if(*format != '%')
 		{
@@ -57,10 +51,6 @@ int _printf(const char *format, ...)
 	}
 
 
-
-
-
-	va_arg;
 
 
 
